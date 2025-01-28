@@ -1,0 +1,513 @@
+*, html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: var(--helpdeskTransition);
+}
+:root{
+    --helpdeskBrown: #782E18;
+    --helpdeskYellow: #FFA51C;
+    --helpdeskLightYellow: #FFC671;
+    --helpdeskLighterYellow: #FFE8C5;
+    --helpdeskDarkYellow: #D48917;
+    --helpdeskDarkBrown: #4D281C;
+    --helpdeskWhite: #F4F4F4;
+    --helpdeskBlack: #1B1B1B;
+    --helpdeskPureWhite: #FFFFFF;
+    --helpdeskPureBlack: #000000;
+    --helpdeskGray: #999999;
+    --helpdeskDarkGray: #484848;
+    --helpdeskLightGray: #C9C9C9;
+    --helpdeskDarkerGray: #292929;
+    --helpdeskLighterGray: #E9E9E9;
+    --helpdeskLightGreen: #ADF7CB;
+    --helpdeskGreen: #18783E;
+    --helpdeskLightRed: #F7ADBC;
+    --helpdeskRed: #CE2020;
+    --helpdeskDarkRed: #A43636;    
+    --helpdeskTransition: all .48s ease-in-out;
+    --helpdeskBoxShadow: 0 0 128px 0 rgba(0, 0, 0, .1);
+}
+
+body{
+    color: var(--helpdeskBlack);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--helpdeskPureWhite);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* DESIGN SYSTEM */
+/* typography */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.1;
+}
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    font-size: 2.1rem;
+}
+h3{
+    font-size: 1.64rem;
+}
+h4{
+    font-size: 1.32rem;
+}
+h5{
+    font-size: 1.16rem;
+}
+h6{
+    font-size: 1.08rem;
+}
+/* typography */
+
+a, a:visited, a:hover, a:focus{
+    text-decoration: none;
+    color: var(--helpdeskBrown);
+}
+.helpdesk-container{
+    width: 92%;
+}
+.helpdesk-position-relative{
+    position: relative;
+}
+.helpdesk-position-absolute{
+    position: absolute;
+}
+.helpdesk-position-fixed{
+    position: fixed;
+}
+.helpdesk-position-sticky{
+    position: sticky;
+}
+.helpdesk-bottom-0{
+    bottom: 0;
+}
+.helpdesk-top-0{
+    top: 0;
+}
+.helpdesk-left-0{
+    left: 0;
+}
+.helpdesk-right-0{
+    right: 0;
+}
+.helpdesk-flex{
+    display: flex;
+}
+.helpdesk-grid{
+    display: grid;
+}
+.helpdesk-none{
+    display: none;
+}
+.helpdesk-block{
+    display: block;
+}
+.helpdesk-flex-column{
+    flex-direction: column;
+}
+.helpdesk-space-between{
+    justify-content: space-between;
+}
+.helpdesk-align-center{
+    align-items: center;
+}
+.helpdesk-with-100{
+    width: 100%;
+}
+.helpdesk-height-100{
+    height: 100%;
+}
+.helpdesk-height-100vh{
+    height: 100vh;
+}
+.helpdesk-width-100vw{
+    width: 100vw;
+}
+.helpdesk-with-auto{
+    width: auto;
+}
+.helpdesk-with-auto{
+    height: auto;
+}
+.helpdesk-svg{
+    height: 16px;
+}
+.helpdesk-margin-auto{
+    margin: auto;
+}
+.helpdesk-bg-color-transparent{
+    background-color: transparent;
+}
+.helpdesk-input-transparent{
+    border: none;
+    outline: none;
+}
+/* Buttons */
+.helpdesk-btn{
+    padding: 8px 16px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--helpdeskYellow);
+    color: var(--helpdeskBlack);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.helpdesk-btn:hover{
+    background-color: var(--helpdeskDarkYellow);
+    color: var(--helpdeskWhite);
+}
+.helpdesk-btn-primary{
+    background-color: var(--helpdeskBrown);
+    color: var(--helpdeskWhite);
+}
+.helpdesk-btn-primary:hover, .helpdesk-btn-primary:focus{
+    background-color: var(--helpdeskDarkBrown);
+}
+.helpdesk-btn-secondary{
+    background-color: var(--helpdeskGray);
+    color: var(--helpdeskWhite);
+}
+.helpdesk-btn-secondary:hover, .helpdesk-btn-secondary:focus{
+    background-color: var(--helpdeskDarkGray);
+}
+/* Buttons */
+/* DESIGN SYSTEM */
+
+/* HEADER */
+#helpdesk-header{
+    padding: 16px 0;
+    border-bottom: 1px solid var(--helpdeskLighterGray);
+    background-color: var(--helpdeskPureWhite);
+}
+#helpdesk-header #helpdesk-logo img{
+    height: 48px;
+}
+#helpdesk-logo a span, #helpdesk-logo a:visited span,
+#helpdesk-logo a:hover span, #helpdesk-logo a:focus span{
+    color: var(--helpdeskBrown);
+    font-size: 32px;
+}
+#helpdesk-logo .helpdesk-flex{
+    gap: 8px;
+}
+#helpdesk-header .helpdesk-svg{
+    height: 24px;
+}
+#helpdesk-header .helpdesk-header-right{
+    gap: 16px;
+}
+.helpdesk-search-form-container{
+    width: 48%;
+}
+.helpdesk-search-form{
+    border-radius: 32px;
+    padding: 8px 8px 8px 24px;
+    background-color: var(--helpdeskWhite);
+}
+.helpdesk-search-form input{
+    display: flex;
+    color: var(--helpdeskBlack);
+}
+#helpdesk-header .helpdesk-btn-search{
+    border-radius: 50%;
+    padding: 8px 8px 7px;
+}
+#helpdesk-header .helpdesk-btn-search .helpdesk-magnifier{
+    height: 16px;
+}
+#helpdesk-header .helpdesk-bell{
+    fill: var(--helpdeskBrown);
+    cursor: pointer;
+}
+#helpdesk-header .helpdesk-bell:hover{
+    fill: var(--helpdeskDarkBrown);
+}
+/* HEADER */
+
+/* MAIN */
+
+/* Login page */
+#helpdesk-main{
+    padding: 64px 0;
+}
+.helpdesk-login{
+    box-shadow: var(--helpdeskBoxShadow);
+    border-radius: 32px;
+    width: fit-content;
+    padding:64px;
+    gap: 24px;
+}
+.helpdesk-login h2{
+    text-align: center;
+}
+.helpdesk-login h2 img{
+    width: 48px;
+    margin-bottom: 8px;
+}
+.helpdesk-login h2 span{
+    font-size: 16px;
+}
+.helpdesk-login-form{
+    gap: 12px;
+}
+.helpdesk-login-form .helpdesk-input-label .helpdesk-input-container{
+    border: 1px solid var(--helpdeskLightGray);
+    padding: 8px;
+    border-radius: 8px;
+}
+#helpdesk-svg-eye-off, #helpdesk-svg-eye-on{cursor: pointer; width:16px;}
+/*.helpdesk-input-label label{
+    margin-bottom: 4px;
+}*/
+/* Login page */
+
+/* Demandes de incidents */
+#helpdesk-tableau-incidents-container{
+    border-radius: 16px;
+    border: 1px solid var(--helpdeskLightGray);
+}
+#helpdesk-tableau-incidents-container h2{
+    color: var(--helpdeskBrown);
+    padding: 32px;
+}
+.helpdesk-tableau-incidents,
+.helpdesk-tableau-incidents-header{
+    width: 100%;
+}
+.helpdesk-tableau-incidents-header td{
+    color: var(--helpdeskGray);
+    width: fit-content;
+    cursor: pointer;
+}
+.helpdesk-tableau-incidents-header td:hover{
+    color: var(--helpdeskDarkGray);
+}
+.helpdesk-tableau-incidents-header td:hover svg{
+    fill: var(--helpdeskDarkGray);
+}
+.helpdesk-tableau-incidents td{
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--helpdeskLighterGray);
+}
+.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-prets-body{
+    cursor: pointer;
+}
+.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-prets-body:hover{
+    background-color: var(--helpdeskWhite);
+}
+.helpdesk-tableau-incidents tfoot td{
+    padding: 16px 32px;
+    border-bottom: none;
+    vertical-align: middle;
+}
+.helpdesk-tableau-incidents tfoot td a,
+.helpdesk-tableau-incidents tfoot td a:visited{
+    padding: 16px;
+    color: var(--helpdeskBlack);
+}
+.helpdesk-tableau-incidents tfoot td a:hover,
+.helpdesk-tableau-incidents tfoot td a:focus{
+    color: var(--helpdeskBrown);
+}
+.helpdesk-tableau-incidents tfoot td svg{
+    height: 12px;
+    fill: var(--helpdeskGray);
+}
+.helpdesk-tableau-incidents tfoot td a:hover svg{
+    fill: var(--helpdeskBrown);
+}
+.helpdesk-tableau-incidents .helpdesk-arrow-bottom{
+    fill: var(--helpdeskGray);
+    height: 6px;
+}
+.helpdesk-tableau-incidents-footer td{
+    width: 100%;
+}
+.helpdesk-statut{
+    padding: 4px 8px;
+    border-radius: 32px;
+    font-weight: 500;
+}
+.helpdesk-statut-attente{
+    color: var(--helpdeskDarkYellow);
+    background-color: var(--helpdeskLightYellow);
+}.helpdesk-statut-resolu{
+    color: var(--helpdeskGreen);
+    background-color: var(--helpdeskLightGreen);
+}.helpdesk-statut-bloque{
+    color: var(--helpdeskDarkRed);
+    background-color: var(--helpdeskLightRed);
+}
+.helpdesk-statut-critique{
+    color: var(--helpdeskLightRed);
+    background-color: var(--helpdeskRed);
+}
+.helpdesk-statut-urgent{
+    color: var(--helpdeskLightYellow);
+    background-color: var(--helpdeskYellow);
+}
+.helpdesk-statut-moyen{
+    color: var(--helpdeskLightYellow);
+    background-color: var(--helpdeskDarkYellow);
+}
+.helpdesk-statut-leger{
+    color: var(--helpdeskLightGreen);
+    background-color: var(--helpdeskGreen);
+}
+/* Demandes de incidents */
+
+/* Détails de la demande de prêt */
+
+#helpdesk-demande-de-prets-single{
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: var(--helpdeskWhite);
+    gap: 16px;
+}
+#helpdesk-demande-de-prets-header{
+    background-color: var(--helpdeskLighterGray);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--helpdeskLightGray);
+}
+#helpdesk-demande-de-prets-single h2{
+    font-size: 24px;
+    color: var(--helpdeskBrown);
+}
+.helpdesk-btn-group{
+    gap: 8px;
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-group .helpdesk-btn{
+    gap: 4px;
+}
+#helpdesk-demande-de-prets-single a, #helpdesk-demande-de-prets-single a:visited{
+    color: var(--helpdeskWhite);
+}
+#helpdesk-accordion-container .helpdesk-accordion-elt a, #helpdesk-accordion-container .helpdesk-accordion-elt a:visited{
+    color: var(--helpdeskBrown);
+}
+#helpdesk-accordion-container .helpdesk-accordion-elt a:hover, #helpdesk-accordion-container .helpdesk-accordion-elt a:focus{
+    color: var(--helpdeskDarkBrown);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-annuler{
+    background-color: var(--helpdeskRed);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-quitter{
+    background-color: var(--helpdeskGray);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler{
+    background-color: var(--helpdeskYellow);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-annuler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-annuler:focus{
+    background-color: var(--helpdeskDarkRed);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-quitter:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-quitter:focus{
+    background-color: var(--helpdeskDarkGray);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:focus{
+    background-color: var(--helpdeskDarkYellow);
+}
+
+#helpdesk-demande-de-prets-single .helpdesk-btn-annuler svg{
+    fill: var(--helpdeskWhite);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-quitter svg{
+    fill: var(--helpdeskWhite);
+}
+#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler svg{
+    fill: var(--helpdeskWhite);
+}
+
+.helpdesk-demande-de-prets-details{
+    border-radius: 8px;
+    border: 1px solid var(--helpdeskLightGray);
+}
+#helpdesk-demande-de-prets-body .helpdesk-demande-de-prets-details h2{
+    color: var(--helpdeskBlack);
+    font-size: 24px;
+    padding: 32px 32px 24px;
+    border-bottom: 1px solid var(--helpdeskLightGray);
+}
+#helpdesk-demande-de-prets-body .helpdesk-demande-de-prets-details h3{
+    font-size: 20px;
+}
+#helpdesk-accordion-container, .helpdesk-submit-group{
+    padding: 32px;
+    gap: 32px;
+}
+.helpdesk-btn-submit-group{
+    gap: 8px;
+}
+.helpdesk-submit-group{
+    padding-top: 0;
+    gap: 16px;
+}
+.helpdesk-submit-group .helpdesk-flex{
+    align-items: center;
+    gap: 8px;
+}
+.helpdesk-accordion-headings .helpdesk-cacher{
+    background-color: transparent;
+    width: fit-content;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: var(--helpdeskBrown);
+}
+.helpdesk-accordion-headings .helpdesk-cacher svg{
+    height: 8px;
+    fill: var(--helpdeskBrown);
+}
+.helpdesk-accordion-elt{
+    gap: 16px;
+}
+.helpdesk-accordion-text-single {
+    border-bottom: 1px solid var(--helpdeskLightGray);
+    padding-bottom: 8px;
+}
+.helpdesk-accordion-text-title{
+    min-width: 512px;
+}
+.helpdesk-accordion-elt .helpdesk-accordion-text .helpdesk-accordion-text-desc .helpdesk-svg{
+    height: 16px;
+    fill: var(--helpdeskBlack);
+}
+.helpdesk-accordion-elt .helpdesk-accordion-text .helpdesk-accordion-text-desc,
+.helpdesk-accordion-elt .helpdesk-accordion-text .helpdesk-accordion-text-desc a{
+    gap: 8px;
+}
+.helpdesk-accordion-elt .helpdesk-accordion-text .helpdesk-accordion-text-desc a svg{
+    fill: var(--helpdeskBrown) !important;
+}.helpdesk-accordion-elt .helpdesk-accordion-text .helpdesk-accordion-text-desc a:hover svg{
+    fill: var(--helpdeskDarkBrown) !important;
+}
+/* Détails de la demande de prêt */
+/* Accordion*/
+.helpdesk-accordion-elt{
+    overflow: hidden;
+    height: 36px;
+}
+.helpdesk-accordion-elt-active{
+    height: fit-content;
+}
+/* Accordion*/
+/* MAIN */
+
+/* FOOTER */
+#helpdesk-footer{
+    border-top: 1px solid var(--helpdeskLighterGray);
+    padding: 32px 0;
+}
+#helpdesk-footer p{
+    text-align: center;
+}
+/* FOOTER */
