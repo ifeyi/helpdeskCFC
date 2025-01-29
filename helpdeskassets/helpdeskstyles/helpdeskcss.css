@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
     transition: var(--helpdeskTransition);
+    -webkit-text-size-adjust:none;
+    text-size-adjust:none;
 }
 :root{
     --helpdeskBrown: #782E18;
@@ -148,6 +150,10 @@ a, a:visited, a:hover, a:focus{
     border: none;
     outline: none;
 }
+textarea, textarea:hover, textarea:focus{
+    outline: none;
+}
+
 /* Buttons */
 .helpdesk-btn{
     padding: 8px 16px;
@@ -163,6 +169,11 @@ a, a:visited, a:hover, a:focus{
     background-color: var(--helpdeskDarkYellow);
     color: var(--helpdeskWhite);
 }
+.helpdesk-btn-transparent, .helpdesk-btn-transparent:hover, .helpdesk-btn-transparent:focus{
+    background-color: transparent;
+    color: var(--helpdeskGray);
+    padding: 8px;
+}
 .helpdesk-btn-primary{
     background-color: var(--helpdeskBrown);
     color: var(--helpdeskWhite);
@@ -176,6 +187,9 @@ a, a:visited, a:hover, a:focus{
 }
 .helpdesk-btn-secondary:hover, .helpdesk-btn-secondary:focus{
     background-color: var(--helpdeskDarkGray);
+}
+#helpdesk-com-btn-ajouter{
+    width: fit-content;
 }
 /* Buttons */
 /* DESIGN SYSTEM */
@@ -365,6 +379,10 @@ a, a:visited, a:hover, a:focus{
     color: var(--helpdeskLightGreen);
     background-color: var(--helpdeskGreen);
 }
+
+.helpdesk-commentaires-admin{
+    background-color: var(--helpdeskLighterGray);
+}
 /* Demandes de incidents */
 
 /* Détails de la demande de prêt */
@@ -481,6 +499,8 @@ a, a:visited, a:hover, a:focus{
     border-bottom: 1px solid var(--helpdeskLightGray);
     padding-bottom: 8px;
     padding-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .helpdesk-accordion-text-title{
     min-width: 512px;
@@ -556,7 +576,6 @@ a, a:visited, a:hover, a:focus{
     width: 512px;
     left: 50%;
     top: 50%;
-    gap: 8px;
     transform: translate(-50%, -50%);
     position: absolute;
     box-shadow: var(--helpdeskBoxShadow);
@@ -579,7 +598,54 @@ a, a:visited, a:hover, a:focus{
 .helpdesk-incident-form .helpdesk-submit, .helpdesk-incident-form-error{
     margin-top: 8px;
 }
+.helpdesk-incident-form-inner{
+    position: relative;
+    gap: 8px;
+}
+#helpdesk-incident-form-svg-annuler{
+    position: absolute;
+    top: -32px;
+    right: -32px;
+    cursor: pointer;
+}
 /* helpdesk-incident-form-wrapper */
+/* helpdesk-com-form */
+
+.helpdesk-com-form{
+    border-radius: 16px;
+    padding: 16px;
+    width: 50%;
+    background-color: var(--helpdeskPureWhite);
+    border: 1px solid var(--helpdeskLighterGray);
+}
+.helpdesk-com-form textarea{
+    background-color: transparent;
+    border: none;
+    height: 100px;
+}
+.helpdesk-com-form-group{
+    gap: 8px;
+    align-items: center;
+    position: relative;
+}
+#helpdesk-com-form-attachment{
+    position: absolute;
+    left: -8px;
+    top: 0;
+    cursor: pointer;
+    width: 24px;
+    padding: 8px;
+    opacity: 0;
+    overflow: hidden;
+}
+/* helpdesk-com-form */
+
+/* ERRORS */
+.helpdesk-error-text{
+    padding: 8px 0;
+    color: var(--helpdeskDarkRed);
+}
+/* ERRORS */
 /* MAIN */
 
 /* FOOTER */
