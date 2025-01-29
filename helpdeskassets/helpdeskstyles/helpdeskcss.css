@@ -237,7 +237,7 @@ a, a:visited, a:hover, a:focus{
 #helpdesk-main{
     padding: 64px 0;
 }
-#helpdesk-main-admin{
+#helpdesk-main.helpdesk-main-admin{
     padding: 0 0;
 }
 
@@ -300,10 +300,10 @@ a, a:visited, a:hover, a:focus{
     padding: 16px 32px;
     border-bottom: 1px solid var(--helpdeskLighterGray);
 }
-.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-prets-body{
+.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-incident-body{
     cursor: pointer;
 }
-.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-prets-body:hover{
+.helpdesk-tableau-incidents tbody tr.helpdesk-tableau-incident-body:hover{
     background-color: var(--helpdeskWhite);
 }
 .helpdesk-tableau-incidents tfoot td{
@@ -369,7 +369,7 @@ a, a:visited, a:hover, a:focus{
 
 /* Détails de la demande de prêt */
 
-#helpdesk-demande-de-prets-single{
+#helpdesk-demande-de-incident-single{
     position: absolute;
     z-index: 99999;
     top: 0;
@@ -381,22 +381,22 @@ a, a:visited, a:hover, a:focus{
     gap: 16px;
     padding-bottom: 32px;
 }
-#helpdesk-demande-de-prets-header{
+#helpdesk-demande-de-incident-header{
     background-color: var(--helpdeskLighterGray);
     padding: 8px 0;
     border-bottom: 1px solid var(--helpdeskLightGray);
 }
-#helpdesk-demande-de-prets-single h2{
+#helpdesk-demande-de-incident-single h2{
     font-size: 24px;
     color: var(--helpdeskBrown);
 }
 .helpdesk-btn-group{
     gap: 8px;
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-group .helpdesk-btn{
+#helpdesk-demande-de-incident-single .helpdesk-btn-group .helpdesk-btn{
     gap: 4px;
 }
-#helpdesk-demande-de-prets-single a, #helpdesk-demande-de-prets-single a:visited{
+#helpdesk-demande-de-incident-single a, #helpdesk-demande-de-incident-single a:visited{
     color: var(--helpdeskWhite);
 }
 #helpdesk-accordion-container .helpdesk-accordion-elt a, #helpdesk-accordion-container .helpdesk-accordion-elt a:visited{
@@ -405,46 +405,46 @@ a, a:visited, a:hover, a:focus{
 #helpdesk-accordion-container .helpdesk-accordion-elt a:hover, #helpdesk-accordion-container .helpdesk-accordion-elt a:focus{
     color: var(--helpdeskDarkBrown);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-annuler{
+#helpdesk-demande-de-incident-single .helpdesk-btn-annuler{
     background-color: var(--helpdeskRed);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-quitter{
+#helpdesk-demande-de-incident-single .helpdesk-btn-quitter{
     background-color: var(--helpdeskGray);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler{
+#helpdesk-demande-de-incident-single .helpdesk-btn-renouveler{
     background-color: var(--helpdeskGreen);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-annuler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-annuler:focus{
+#helpdesk-demande-de-incident-single .helpdesk-btn-annuler:hover, #helpdesk-demande-de-incident-single .helpdesk-btn-annuler:focus{
     background-color: var(--helpdeskDarkRed);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-quitter:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-quitter:focus{
+#helpdesk-demande-de-incident-single .helpdesk-btn-quitter:hover, #helpdesk-demande-de-incident-single .helpdesk-btn-quitter:focus{
     background-color: var(--helpdeskDarkGray);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:focus{
+#helpdesk-demande-de-incident-single .helpdesk-btn-renouveler:hover, #helpdesk-demande-de-incident-single .helpdesk-btn-renouveler:focus{
     background-color: var(--helpdeskDarkGreen);
 }
 
-#helpdesk-demande-de-prets-single .helpdesk-btn-annuler svg{
+#helpdesk-demande-de-incident-single .helpdesk-btn-annuler svg{
     fill: var(--helpdeskWhite);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-quitter svg{
+#helpdesk-demande-de-incident-single .helpdesk-btn-quitter svg{
     fill: var(--helpdeskWhite);
 }
-#helpdesk-demande-de-prets-single .helpdesk-btn-renouveler svg{
+#helpdesk-demande-de-incident-single .helpdesk-btn-renouveler svg{
     fill: var(--helpdeskWhite);
 }
 
-.helpdesk-demande-de-prets-details{
+.helpdesk-demande-de-incident-details{
     border-radius: 8px;
     border: 1px solid var(--helpdeskLightGray);
 }
-#helpdesk-demande-de-prets-body .helpdesk-demande-de-prets-details h2{
+#helpdesk-demande-de-incident-body .helpdesk-demande-de-incident-details h2{
     color: var(--helpdeskBlack);
     font-size: 24px;
     padding: 32px 32px 24px;
     border-bottom: 1px solid var(--helpdeskLightGray);
 }
-#helpdesk-demande-de-prets-body .helpdesk-demande-de-prets-details h3{
+#helpdesk-demande-de-incident-body .helpdesk-demande-de-incident-details h3{
     font-size: 20px;
 }
 #helpdesk-accordion-container, .helpdesk-submit-group{
@@ -539,7 +539,47 @@ a, a:visited, a:hover, a:focus{
 #helpdesk-sidebar, .helpdesk-container-admin{
     padding-top: 64px;
 }
-
+/* helpdesk-incident-form-wrapper */
+#helpdesk-incident-form-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .64);
+    z-index: 9999;
+}
+.helpdesk-incident-form{
+    background-color: var(--helpdeskWhite);
+    padding: 64px;
+    border-radius: 32px;
+    width: 512px;
+    left: 50%;
+    top: 50%;
+    gap: 8px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: var(--helpdeskBoxShadow);
+    z-index: 99999;
+}
+.helpdesk-incident-form-heading h3{
+    color: var(--helpdeskBrown);
+}
+.helpdesk-main-admin .helpdesk-input{
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--helpdeskLightGray);
+    padding: 8px;
+}
+.helpdesk-main-admin label span{
+    color: var(--helpdeskDarkGray);
+    margin-bottom: 4px;
+}
+.helpdesk-incident-form .helpdesk-submit, .helpdesk-incident-form-error{
+    margin-top: 8px;
+}
+/* helpdesk-incident-form-wrapper */
 /* MAIN */
 
 /* FOOTER */

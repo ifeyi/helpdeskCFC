@@ -41,18 +41,18 @@ if(helpdeskAccordionElt){
 /* helpdesk SINGLE */
 
 let helpdeskBtnQuitter = document.getElementById("helpdesk-btn-quitter");
-let helpdeskDemandeDePretsSingle = document.getElementById("helpdesk-demande-de-prets-single");
-let helpdeskTableauPretsBody = document.querySelectorAll(".helpdesk-tableau-prets-body");
+let helpdeskDemandeDeincidentSingle = document.getElementById("helpdesk-demande-de-incident-single");
+let helpdeskTableauincidentBody = document.querySelectorAll(".helpdesk-tableau-incident-body");
 
-helpdeskTableauPretsBody.forEach((elt) => {
+helpdeskTableauincidentBody.forEach((elt) => {
     elt.addEventListener("click", () => {
-        helpdeskDemandeDePretsSingle.classList.toggle("helpdesk-none");
+        helpdeskDemandeDeincidentSingle.classList.toggle("helpdesk-none");
     });
 });
 
 if(helpdeskBtnQuitter){
     helpdeskBtnQuitter.addEventListener("click", () => {
-        helpdeskDemandeDePretsSingle.classList.toggle("helpdesk-none");
+        helpdeskDemandeDeincidentSingle.classList.toggle("helpdesk-none");
     });
 }
 

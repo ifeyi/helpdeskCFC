@@ -65,7 +65,7 @@
         </div>
     </header>
 
-    <main id="helpdesk-main helpdesk-main-admin">
+    <main id="helpdesk-main" class="helpdesk-main-admin">
         <div class="helpdesk-main-inner helpdesk-flex">
             <nav id="helpdesk-sidebar">
                 <div class="helpdesk-sidebar-top">
@@ -152,7 +152,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="helpdesk-tableau-prets-body">
+                                    <tr class="helpdesk-tableau-incident-body">
                                         <td colspan="1">
                                             <span>
                                                 Problème avec Cartagho
@@ -229,8 +229,8 @@
                             </table>
                         </div>
                     </div>
-                    <div id="helpdesk-demande-de-prets-single" class="helpdesk-none helpdesk-flex helpdesk-flex-column">
-                        <div id="helpdesk-demande-de-prets-header">
+                    <div id="helpdesk-demande-de-incident-single" class="helpdesk-none helpdesk-flex helpdesk-flex-column">
+                        <div id="helpdesk-demande-de-incident-header">
                             <div class="helpdesk-container helpdesk-margin-auto">
                                 <div class="helpdesk-flex helpdesk-space-between helpdesk-align-center">
                                     <h2>
@@ -269,9 +269,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="helpdesk-demande-de-prets-body">
+                        <div id="helpdesk-demande-de-incident-body">
                             <div class="helpdesk-container helpdesk-margin-auto">
-                                <div class="helpdesk-demande-de-prets-details">
+                                <div class="helpdesk-demande-de-incident-details">
                                     <h2>
                                         BOSEME Bankman Manyo
                                     </h2>
@@ -538,9 +538,51 @@
                                 </div>    
                             </div>
                         </div>
+                    </div><!--End incident single-->
+                    <div id="helpdesk-incident-form-wrapper">
+                        <form class="helpdesk-incident-form helpdesk-flex helpdesk-flex-column" action="" method="">
+                            <div class="helpdesk-incident-form-heading">
+                                <h3>Nouvel incident</h3>
+                            </div>
+                            <label class="helpdesk-flex helpdesk-flex-column" for="helpdesk-incident-form-title">
+                                <span class="helpdesk-label">Titre</span>
+                                <input type="text" id="helpdesk-incident-form-title" name="helpdesk-incident-form-title" class="helpdesk-input" placeholder="Donnez un titre à l'incident" required>
+                            </label>
+                            <label class="helpdesk-flex helpdesk-flex-column" for="helpdesk-incident-form-description">
+                                <span class="helpdesk-label">Description</span>
+                                <textarea id="helpdesk-incident-form-description" name="helpdesk-incident-form-description" class="helpdesk-input" placeholder="Décrivez au mieux l'incident"></textarea>
+                            </label>
+                            <label class="helpdesk-flex helpdesk-flex-column" for="helpdesk-incident-form-categorie">
+                                <span class="helpdesk-label">Catégorie de l'incident</span>
+                                <select id="helpdesk-incident-form-categorie" name="helpdesk-incident-form-categorie" class="helpdesk-input">
+                                    <option value="logiciel">Logiciel</option>
+                                    <option value="materiel">Matériel</option>
+                                    <option value="reseau">Réseau</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </label>    
+                            <label class="helpdesk-flex helpdesk-flex-column" for="helpdesk-incident-form-application">
+                                <span class="helpdesk-label">Application affectée</span>
+                                <select id="helpdesk-incident-form-application" name="helpdesk-incident-form-application" class="helpdesk-input">
+                                    <option value="Carthago">Carthago</option>
+                                    <option value="Mailsoft">Mailsoft</option>
+                                    <option value="Outlook">Outlook</option>
+                                    <option value="Sharepoint">Sharepoint</option>
+                                    <option value="Skype">Skype</option>
+                                    <option value="Office">Office</option>
+                                    <option value="autre">Autre</option>
+                                </select>                            
+                            </label> 
+                            <button class="helpdesk-btn helpdesk-submit" type="submit">
+                                Envoyer
+                            </button>  
+                            <div class="helpdesk-incident-form-error">
+
+                            </div>
+                        </form>
                     </div>
-                </div>
-            </div>
+                </div><!--End helpdesk-admin-home-table-->
+            </div><!--End helpdesk-container-admin-->
         </div>
     </main>
 
