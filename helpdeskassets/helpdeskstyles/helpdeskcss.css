@@ -9,6 +9,7 @@
     --helpdeskYellow: #FFA51C;
     --helpdeskLightYellow: #FFC671;
     --helpdeskLighterYellow: #FFE8C5;
+    --helpdeskOrange: #F67A1B;
     --helpdeskDarkYellow: #D48917;
     --helpdeskDarkBrown: #4D281C;
     --helpdeskWhite: #F4F4F4;
@@ -22,6 +23,7 @@
     --helpdeskLighterGray: #E9E9E9;
     --helpdeskLightGreen: #ADF7CB;
     --helpdeskGreen: #18783E;
+    --helpdeskDarkGreen: #0F4D28;
     --helpdeskLightRed: #F7ADBC;
     --helpdeskRed: #CE2020;
     --helpdeskDarkRed: #A43636;    
@@ -235,6 +237,10 @@ a, a:visited, a:hover, a:focus{
 #helpdesk-main{
     padding: 64px 0;
 }
+#helpdesk-main-admin{
+    padding: 0 0;
+}
+
 .helpdesk-login{
     box-shadow: var(--helpdeskBoxShadow);
     border-radius: 32px;
@@ -352,8 +358,8 @@ a, a:visited, a:hover, a:focus{
     background-color: var(--helpdeskYellow);
 }
 .helpdesk-statut-moyen{
-    color: var(--helpdeskLightYellow);
-    background-color: var(--helpdeskDarkYellow);
+    color: var(--helpdeskWhite);
+    background-color: var(--helpdeskOrange);
 }
 .helpdesk-statut-leger{
     color: var(--helpdeskLightGreen);
@@ -373,6 +379,7 @@ a, a:visited, a:hover, a:focus{
     overflow: scroll;
     background-color: var(--helpdeskWhite);
     gap: 16px;
+    padding-bottom: 32px;
 }
 #helpdesk-demande-de-prets-header{
     background-color: var(--helpdeskLighterGray);
@@ -405,7 +412,7 @@ a, a:visited, a:hover, a:focus{
     background-color: var(--helpdeskGray);
 }
 #helpdesk-demande-de-prets-single .helpdesk-btn-renouveler{
-    background-color: var(--helpdeskYellow);
+    background-color: var(--helpdeskGreen);
 }
 #helpdesk-demande-de-prets-single .helpdesk-btn-annuler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-annuler:focus{
     background-color: var(--helpdeskDarkRed);
@@ -414,7 +421,7 @@ a, a:visited, a:hover, a:focus{
     background-color: var(--helpdeskDarkGray);
 }
 #helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:hover, #helpdesk-demande-de-prets-single .helpdesk-btn-renouveler:focus{
-    background-color: var(--helpdeskDarkYellow);
+    background-color: var(--helpdeskDarkGreen);
 }
 
 #helpdesk-demande-de-prets-single .helpdesk-btn-annuler svg{
@@ -473,6 +480,7 @@ a, a:visited, a:hover, a:focus{
 .helpdesk-accordion-text-single {
     border-bottom: 1px solid var(--helpdeskLightGray);
     padding-bottom: 8px;
+    padding-top: 8px;
 }
 .helpdesk-accordion-text-title{
     min-width: 512px;
@@ -500,6 +508,38 @@ a, a:visited, a:hover, a:focus{
     height: fit-content;
 }
 /* Accordion*/
+
+.helpdesk-main-inner{
+    width: 100%;
+    align-items: baseline;
+}
+.helpdesk-admin-home-heading{
+    margin-bottom: 32px;
+}
+.helpdesk-admin-home-heading .helpdesk-flex{
+    justify-content: space-between;
+}
+
+#helpdesk-sidebar{
+    width: 25%;
+    height: calc(100vh - 182px);
+    border-right: 1px solid var(--helpdeskLighterGray);
+}
+#helpdesk-sidebar ul li a{
+    padding: 8px 16%;  
+    display: block;
+}
+#helpdesk-sidebar ul li a.helpdesk-a-active{
+    background-color: var(--helpdeskLighterGray);
+}
+.helpdesk-container-admin{
+    width: calc(100% - 25% - 8%);
+    margin: 0 auto;
+}
+#helpdesk-sidebar, .helpdesk-container-admin{
+    padding-top: 64px;
+}
+
 /* MAIN */
 
 /* FOOTER */
