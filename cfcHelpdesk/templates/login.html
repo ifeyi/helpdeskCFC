@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +20,10 @@
 
     <title>Login – CFC</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./helpdeskassets/helpdeskfavicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./helpdeskassets/helpdeskfavicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./helpdeskassets/helpdeskfavicons/favicon-16x16.png">
-    <link rel="manifest" href="./helpdeskassets/helpdeskfavicons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static './helpdeskassets/helpdeskfavicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static './helpdeskassets/helpdeskfavicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static './helpdeskassets/helpdeskfavicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static './helpdeskassets/helpdeskfavicons/site.webmanifest' %}">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -29,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">     
-    <link rel="stylesheet" href="./helpdeskassets/helpdeskstyles/helpdeskcss.css"/>
+    <link rel="stylesheet" href="{% static './helpdeskassets/helpdeskstyles/helpdeskcss.css' %}"/>
 </head>
 <body class="helpdesk-login-page">
     <header id="helpdesk-header" class="helpdesk-with-100">
@@ -109,6 +111,6 @@
             </p>
         </div>
     </footer>
-    <script src="./helpdeskassets/helpdeskscripts/helpdeskmain.js"></script>
+    <script src="{% static './helpdeskassets/helpdeskscripts/helpdeskmain.js' %}"></script>
 </body>
 </html>
