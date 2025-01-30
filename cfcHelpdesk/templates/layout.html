@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat.">
     <meta name="rights" content="Crédit Foncier du Cameroun">
-    <meta name="keywords" content="Crédit Foncier du Cameroun, Helpdesk, Prêts, Crédit, Habitat, Immobilier, Financement, Banque, Cameroun, CFC">
+    <meta name="keywords" content="Crédit Foncier du Cameroun, Helpdesk, incidents, Crédit, Habitat, Immobilier, Financement, Banque, Cameroun, CFC">
     <meta name="author" content="Ifeyi Batindek">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     
@@ -16,12 +18,12 @@
     <meta property="fb:admins" content="creditfonciercameroun"/>
     <meta property="og:description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat."/>
 
-    <title>Login – CFC</title>
+    <title>{% block title %}{% endblock %} | Helpdesk</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./helpdeskassets/helpdeskfavicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./helpdeskassets/helpdeskfavicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./helpdeskassets/helpdeskfavicons/favicon-16x16.png">
-    <link rel="manifest" href="./helpdeskassets/helpdeskfavicons/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static './helpdeskassets/helpdeskfavicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static './helpdeskassets/helpdeskfavicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static './helpdeskassets/helpdeskfavicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static './helpdeskassets/helpdeskfavicons/site.webmanifest' %}">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -29,21 +31,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">     
-    <link rel="stylesheet" href="./helpdeskassets/helpdeskstyles/helpdeskcss.css"/>
+    <link rel="stylesheet" href="{% static './helpdeskassets/helpdeskstyles/helpdeskcss.css' %}"/>
 </head>
 <body class="helpdesk-login-page">
     <header id="helpdesk-header" class="helpdesk-with-100">
         <div class="helpdesk-container helpdesk-margin-auto">
             <div class="helpdesk-flex helpdesk-space-between">
                 <h1 id="helpdesk-logo">
-                    <a class="helpdesk-none helpdesk-flex helpdesk-align-center" href="index.html">
-                        <img src="./helpdeskassets/helpdeskimg/helpdesklogo/logo-cfc-no-bg.png" alt="Helpdesk">
+                    <a class=" helpdesk-flex helpdesk-align-center" href="index.html">
+                        <img src="{% static './helpdeskassets/helpdeskimg/helpdesklogo/logo-cfc-no-bg.png' %}" alt="Helpdesk">
                         <span>
                             Helpdesk
                         </span>
                     </a>
                 </h1>
-                <div class="helpdesk-none helpdesk-search-form-container">
+                <div class=" helpdesk-search-form-container">
                     <form class="helpdesk-search-form helpdesk-with-100 helpdesk-flex helpdesk-space-between" action="" method="">
                         <input type="text" class="helpdesk-with-100 helpdesk-input-transparent helpdesk-bg-color-transparent" placeholder="Rechercher un incident">
                         <button class="helpdesk-btn helpdesk-btn-search" type="submit">
@@ -57,7 +59,7 @@
                     <a class="helpdesk-btn helpdesk-btn-lang" href="#">
                         English
                     </a>
-                    <svg class="helpdesk-none helpdesk-svg helpdesk-bell" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg class=" helpdesk-svg helpdesk-bell" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.35206 18.242C5.78721 18.7922 6.34171 19.2364 6.97367 19.541C7.60564 19.8455 8.29855 20.0025 9.00006 20C9.70158 20.0025 10.3945 19.8455 11.0264 19.541C11.6584 19.2364 12.2129 18.7922 12.6481 18.242C10.2271 18.5697 7.77303 18.5697 5.35206 18.242ZM15.7501 7V7.704C15.7501 8.549 15.9901 9.375 16.4421 10.078L17.5501 11.801C18.5611 13.375 17.7891 15.514 16.0301 16.011C11.4338 17.3127 6.56635 17.3127 1.97006 16.011C0.211062 15.514 -0.560938 13.375 0.450062 11.801L1.55806 10.078C2.01127 9.36919 2.25178 8.54531 2.25106 7.704V7C2.25106 3.134 5.27306 0 9.00006 0C12.7271 0 15.7501 3.134 15.7501 7Z"/>
                     </svg>  
                 </div>  
@@ -65,42 +67,7 @@
         </div>
     </header>
 
-    <main id="helpdesk-main">
-        <div class="helpdesk-container helpdesk-margin-auto">
-            <div class="helpdesk-login helpdesk-margin-auto helpdesk-flex helpdesk-flex-column">
-                <h2 class="helpdesk-margin-auto">
-                    <div class="helpdesk-flex helpdesk-flex-column">
-                        <img class="helpdesk-margin-auto" src="./helpdeskassets/helpdeskimg/helpdesklogo/logo-cfc-no-bg.png" alt="Helpdesk">
-                        <span>
-                            Connectez-vous
-                        </span>
-                    </div>
-                </h2>
-                <form class="helpdesk-login-form helpdesk-margin-auto helpdesk-flex helpdesk-flex-column" action="home.html" method="post">
-                    <div class="helpdesk-input-label">
-                        <div class="helpdesk-input-container helpdesk-flex">
-                            <input class="helpdesk-with-100 helpdesk-input-transparent helpdesk-bg-color-transparent helpdesk-input" type="text" name="helpdesk-username" id="helpdesk-username" placeholder="Nom d'utilisateur" required>
-                        </div>
-                    </div>
-                    <div class="helpdesk-input-label">
-                        <div class="helpdesk-input-container helpdesk-flex">
-                            <input class="helpdesk-with-100 helpdesk-input-transparent helpdesk-bg-color-transparent helpdesk-input" type="password" name="helpdesk-password" id="helpdesk-password" placeholder="Mot de passe" required>
-                            
-                            <svg class="helpdesk-height-auto  helpdesk-svg" id="helpdesk-svg-eye-on" viewBox="0 0 22 16">
-                                <path d="M11 5C10.2044 5 9.44129 5.31607 8.87868 5.87868C8.31607 6.44129 8 7.20435 8 8C8 8.79565 8.31607 9.55871 8.87868 10.1213C9.44129 10.6839 10.2044 11 11 11C11.7956 11 12.5587 10.6839 13.1213 10.1213C13.6839 9.55871 14 8.79565 14 8C14 7.20435 13.6839 6.44129 13.1213 5.87868C12.5587 5.31607 11.7956 5 11 5ZM11 13C9.67392 13 8.40215 12.4732 7.46447 11.5355C6.52678 10.5979 6 9.32608 6 8C6 6.67392 6.52678 5.40215 7.46447 4.46447C8.40215 3.52678 9.67392 3 11 3C12.3261 3 13.5979 3.52678 14.5355 4.46447C15.4732 5.40215 16 6.67392 16 8C16 9.32608 15.4732 10.5979 14.5355 11.5355C13.5979 12.4732 12.3261 13 11 13ZM11 0.5C6 0.5 1.73 3.61 0 8C1.73 12.39 6 15.5 11 15.5C16 15.5 20.27 12.39 22 8C20.27 3.61 16 0.5 11 0.5Z"/>
-                            </svg>    
-                            
-                            <svg class="helpdesk-height-auto helpdesk-svg helpdesk-none" id="helpdesk-svg-eye-off" viewBox="0 0 22 19">
-                                <path d="M10.83 6L14 9.16V9C14 8.20435 13.6839 7.44129 13.1213 6.87868C12.5587 6.31607 11.7956 6 11 6H10.83ZM6.53 6.8L8.08 8.35C8.03 8.56 8 8.77 8 9C8 9.79565 8.31607 10.5587 8.87868 11.1213C9.44129 11.6839 10.2044 12 11 12C11.22 12 11.44 11.97 11.65 11.92L13.2 13.47C12.53 13.8 11.79 14 11 14C9.67392 14 8.40215 13.4732 7.46447 12.5355C6.52678 11.5979 6 10.3261 6 9C6 8.21 6.2 7.47 6.53 6.8ZM1 1.27L3.28 3.55L3.73 4C2.08 5.3 0.78 7 0 9C1.73 13.39 6 16.5 11 16.5C12.55 16.5 14.03 16.2 15.38 15.66L15.81 16.08L18.73 19L20 17.73L2.27 0M11 4C12.3261 4 13.5979 4.52678 14.5355 5.46447C15.4732 6.40215 16 7.67392 16 9C16 9.64 15.87 10.26 15.64 10.82L18.57 13.75C20.07 12.5 21.27 10.86 22 9C20.27 4.61 16 1.5 11 1.5C9.6 1.5 8.26 1.75 7 2.2L9.17 4.35C9.74 4.13 10.35 4 11 4Z"/>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <button class="helpdesk-btn-submit helpdesk-btn" type="submit">Se connecter</button>
-                </form>
-            </div>
-        </div>
-    </main>
+    {% block main %}{% endblock %}
 
     <footer id="helpdesk-footer" class="helpdesk-bottom-0 helpdesk-position-absolute helpdesk-with-100">
         <div class="helpdesk-container helpdesk-margin-auto">
@@ -109,6 +76,6 @@
             </p>
         </div>
     </footer>
-    <script src="./helpdeskassets/helpdeskscripts/helpdeskmain.js"></script>
+    <script src="{% static './helpdeskassets/helpdeskscripts/helpdeskmain.js' %}"></script>
 </body>
 </html>

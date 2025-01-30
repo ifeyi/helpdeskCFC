@@ -1,71 +1,8 @@
-{% load static %}
+{% extends 'layout.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat.">
-    <meta name="rights" content="Crédit Foncier du Cameroun">
-    <meta name="keywords" content="Crédit Foncier du Cameroun, Helpdesk, Prêts, Crédit, Habitat, Immobilier, Financement, Banque, Cameroun, CFC">
-    <meta name="author" content="Ifeyi Batindek">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-    
-    <meta property="og:title" content="Crédit Foncier du Cameroun"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="https://www.creditfoncier.cm/"/>
-    <meta property="og:image" content="https://www.creditfoncier.cm/images/stories/cfc/logo.png"/>
-    <meta property="og:site_name" content="Crédit Foncier du Cameroun"/>
-    <meta property="fb:admins" content="creditfonciercameroun"/>
-    <meta property="og:description" content="Le Crédit Foncier du Cameroun (CFC) est un établissement public à caractère commercial. Il est doté d'une personnalité juridique et de l'autonomie financière. Il à pour objet social d'apporter son concours financier à la réalisation de tout projet destiné à promouvoir l'habitat."/>
+{% block title %}Login{% endblock %}
 
-    <title>Login – CFC</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static './helpdeskassets/helpdeskfavicons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static './helpdeskassets/helpdeskfavicons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static './helpdeskassets/helpdeskfavicons/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static './helpdeskassets/helpdeskfavicons/site.webmanifest' %}">
-
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">     
-    <link rel="stylesheet" href="{% static './helpdeskassets/helpdeskstyles/helpdeskcss.css' %}"/>
-</head>
-<body class="helpdesk-login-page">
-    <header id="helpdesk-header" class="helpdesk-with-100">
-        <div class="helpdesk-container helpdesk-margin-auto">
-            <div class="helpdesk-flex helpdesk-space-between">
-                <h1 id="helpdesk-logo">
-                    <a class="helpdesk-none helpdesk-flex helpdesk-align-center" href="index.html">
-                        <img src="./helpdeskassets/helpdeskimg/helpdesklogo/logo-cfc-no-bg.png" alt="Helpdesk">
-                        <span>
-                            Helpdesk
-                        </span>
-                    </a>
-                </h1>
-                <div class="helpdesk-none helpdesk-search-form-container">
-                    <form class="helpdesk-search-form helpdesk-with-100 helpdesk-flex helpdesk-space-between" action="" method="">
-                        <input type="text" class="helpdesk-with-100 helpdesk-input-transparent helpdesk-bg-color-transparent" placeholder="Rechercher un incident">
-                        <button class="helpdesk-btn helpdesk-btn-search" type="submit">
-                            <svg class="helpdesk-svg helpdesk-magnifier" viewBox="0 0 14 14">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4999 5.9999C10.4999 6.59085 10.3835 7.17601 10.1574 7.72197C9.93121 8.26794 9.59974 8.76401 9.18188 9.18188C8.76401 9.59974 8.26794 9.93121 7.72197 10.1574C7.17601 10.3835 6.59085 10.4999 5.9999 10.4999C5.40895 10.4999 4.82379 10.3835 4.27782 10.1574C3.73186 9.93121 3.23578 9.59974 2.81792 9.18188C2.40005 8.76401 2.06859 8.26794 1.84244 7.72197C1.61629 7.17601 1.4999 6.59085 1.4999 5.9999C1.4999 4.80642 1.974 3.66183 2.81792 2.81792C3.66183 1.974 4.80642 1.4999 5.9999 1.4999C7.19337 1.4999 8.33796 1.974 9.18188 2.81792C10.0258 3.66183 10.4999 4.80642 10.4999 5.9999ZM9.6799 10.7399C8.47427 11.6759 6.95726 12.1172 5.4377 11.974C3.91813 11.8309 2.51024 11.114 1.50065 9.96929C0.491052 8.82461 -0.0443519 7.3382 0.00343225 5.81265C0.0512164 4.2871 0.678596 2.8371 1.75785 1.75785C2.8371 0.678596 4.2871 0.0512164 5.81265 0.00343225C7.3382 -0.0443519 8.82461 0.491052 9.96929 1.50065C11.114 2.51024 11.8309 3.91813 11.974 5.4377C12.1172 6.95726 11.6759 8.47427 10.7399 9.6799L13.5299 12.4699C13.6036 12.5386 13.6627 12.6214 13.7037 12.7134C13.7447 12.8054 13.7667 12.9047 13.7685 13.0054C13.7703 13.1061 13.7517 13.2061 13.714 13.2995C13.6763 13.3929 13.6202 13.4777 13.5489 13.5489C13.4777 13.6202 13.3929 13.6763 13.2995 13.714C13.2061 13.7517 13.1061 13.7703 13.0054 13.7685C12.9047 13.7667 12.8054 13.7447 12.7134 13.7037C12.6214 13.6627 12.5386 13.6036 12.4699 13.5299L9.6799 10.7399Z"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-                <div class="helpdesk-header-right helpdesk-flex helpdesk-align-center">
-                    <a class="helpdesk-btn helpdesk-btn-lang" href="#">
-                        English
-                    </a>
-                    <svg class="helpdesk-none helpdesk-svg helpdesk-bell" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.35206 18.242C5.78721 18.7922 6.34171 19.2364 6.97367 19.541C7.60564 19.8455 8.29855 20.0025 9.00006 20C9.70158 20.0025 10.3945 19.8455 11.0264 19.541C11.6584 19.2364 12.2129 18.7922 12.6481 18.242C10.2271 18.5697 7.77303 18.5697 5.35206 18.242ZM15.7501 7V7.704C15.7501 8.549 15.9901 9.375 16.4421 10.078L17.5501 11.801C18.5611 13.375 17.7891 15.514 16.0301 16.011C11.4338 17.3127 6.56635 17.3127 1.97006 16.011C0.211062 15.514 -0.560938 13.375 0.450062 11.801L1.55806 10.078C2.01127 9.36919 2.25178 8.54531 2.25106 7.704V7C2.25106 3.134 5.27306 0 9.00006 0C12.7271 0 15.7501 3.134 15.7501 7Z"/>
-                    </svg>  
-                </div>  
-            </div>
-        </div>
-    </header>
+{% block main %}
 
     <main id="helpdesk-main">
         <div class="helpdesk-container helpdesk-margin-auto">
@@ -104,13 +41,4 @@
         </div>
     </main>
 
-    <footer id="helpdesk-footer" class="helpdesk-bottom-0 helpdesk-position-absolute helpdesk-with-100">
-        <div class="helpdesk-container helpdesk-margin-auto">
-            <p>
-                &copy; 2025 Helpdesk - Crédit Foncier. Tous droits réservés.
-            </p>
-        </div>
-    </footer>
-    <script src="{% static './helpdeskassets/helpdeskscripts/helpdeskmain.js' %}"></script>
-</body>
-</html>
+{% endblock %}
